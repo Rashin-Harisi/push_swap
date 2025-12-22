@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:01:53 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/10/13 10:16:17 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:27:18 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -20,7 +20,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int				ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 void			ft_bzero(void *str, size_t n);
 int				ft_isalnum(char c);
 int				ft_isalpha(int c);

@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:13:13 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/19 14:54:41 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:06:25 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-
+# include <stdio.h>
 
 typedef struct s_stack
 {

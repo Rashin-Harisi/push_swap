@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 09:15:36 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/10/13 09:23:47 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:22:39 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,11 +30,11 @@ int	check_handler(const char *str, int *i, int *sign)
 	return (*sign);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long	result;
 
 	result = 0;
 	i = 0;

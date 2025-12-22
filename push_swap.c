@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/21 15:30:25 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:37:49 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -271,32 +271,61 @@ int main(int argc, char *argv[])
 {
 	int	i;
 	long	value;
+	char	**result;
 	t_stack	*stack_A;
 	t_stack	*stack_B;
+	int	j;
 
 	stack_A = NULL;
 	stack_B = NULL;
 	i = 1;
+	j = 0;
 
 	if (argc == 1)
 		return (0);
-	while (i < argc)
+	else if (argc == 2)
 	{
-		if (!is_number(argv[i]))
+		result = ft_split(argv[1], ' ');
+		while (result[j] != NULL)
 		{
-			free_stack(&stack_A);
-			write(2,"Error\n",6);
-			return (1);
+			if (!is_number(result[j]))
+			{
+				free_stack(&stack_A);
+				write(2, "Error\n", 6);
+				return (1);
+			}
+			value = ft_atoi(result[j]);
+			if (value > INT_MAX || value < INT_MIN || is_douplicat(stack_A, (int) value))
+			{
+				free_stack(&stack_A);
+                        	write(2,"Error\n",6);
+                        	return (1);
+			}
+			add_to_bottom(&stack_A, new_node((int)value));
+			j++;
 		}
-		value = ft_atoi(argv[i]);
-		if (value > INT_MAX || value < INT_MIN || is_douplicat(stack_A, (int) value))
+	}
+	else
+	{
+		while (i < argc)
 		{
-			free_stack(&stack_A);
-			write(2,"Error\n",6);
-			return (1);
+			if (!is_number(argv[i]))
+			{
+				free_stack(&stack_A);
+				write(2,"Error\n",6);
+				return (1);
+			}
+			value = ft_atoi(argv[i]);
+			//printf("value is : %ld\n",value);
+			if (value > INT_MAX  || value < INT_MIN || is_douplicat(stack_A, (int) value))
+			{
+				free_stack(&stack_A);
+				write(2,"Error\n",6);
+				return (1);
+			}
+			add_to_bottom(&stack_A, new_node((int)value));
+			i++;
 		}
-		add_to_bottom(&stack_A, new_node((int)value));
-		i++;
 	}
 	add_to_bottom(&stack_B, new_node(54));
 	add_to_bottom(&stack_B, new_node(5));
@@ -305,6 +334,7 @@ int main(int argc, char *argv[])
 	add_to_bottom(&stack_B, new_node(13));
 	print_stack(stack_A , "stack_A");
 	print_stack(stack_B, "stack_B");
+/*
 	ft_printf("---------------swap---------------\n");
 	sa(&stack_A);
 	print_stack(stack_A, "stack_A_SA");
@@ -335,5 +365,6 @@ int main(int argc, char *argv[])
         print_stack(stack_A , "stack_A_RRR");
         print_stack(stack_B , "stack_B_RRR");
 	ft_printf("------------------------------------------\n");
+*/
 	return (0);
 }
