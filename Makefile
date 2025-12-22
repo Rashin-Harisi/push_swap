@@ -1,6 +1,8 @@
 NAME		= push_swap
 
 SRC			=push_swap.c\
+			 actions.c\
+			 small_sorting.c
 
 OBJ			= $(SRC:.c=.o)
 
