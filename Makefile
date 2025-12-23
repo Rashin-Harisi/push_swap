@@ -1,30 +1,29 @@
-NAME		= push_swap
+NAME            = push_swap
 
-SRC			=push_swap.c\
-			 actions.c\
-			 small_sorting.c\
-			 turk_sorting.c\
-OBJ			= $(SRC:.c=.o)
+SRC             = push_swap.c \
+                  actions.c \
+                  small_sorting.c \
+                  turk_sorting.c
+                  
+OBJ             = $(SRC:.c=.o)
 
-LIBFT_PATH  = ./libft
-LIBFT		= $(LIBFT_PATH)/libft.a
+LIBFT_PATH      = ./libft
+LIBFT           = $(LIBFT_PATH)/libft.a
 
-FT_PRINTF_PATH = ./ft_printf
-FT_PRINTF      = $(FT_PRINTF_PATH)/libftprintf.a
+FT_PRINTF_PATH  = ./ft_printf
+FT_PRINTF       = $(FT_PRINTF_PATH)/libftprintf.a
 
-CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
+CC              = cc
+CFLAGS          = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-bonus: all
-
-
 $(NAME): $(LIBFT) $(FT_PRINTF) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(FT_PRINTF) -o $(NAME)
-	
+
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_PATH)
+
 $(FT_PRINTF):
 	$(MAKE) -C $(FT_PRINTF_PATH)
 
@@ -34,7 +33,7 @@ $(FT_PRINTF):
 clean:
 	rm -f $(OBJ)
 	$(MAKE) clean -C $(LIBFT_PATH)
-	$(MAKE) clean -C $(FT_LIBTF_PATH)
+	$(MAKE) clean -C $(FT_PRINTF_PATH)
 
 fclean: clean
 	rm -f $(NAME)
@@ -43,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re 
+.PHONY: all bonus clean fclean re

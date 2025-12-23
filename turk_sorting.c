@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 10:03:28 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/23 16:33:19 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/23 16:50:27 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -29,13 +29,12 @@ void	set_index(t_stack *stack)
 int	cost_calculating(t_stack *stack, int nums)
 {
 	int	cost;
-	int	index;
 
 	cost = 0;
 	if (!stack)
 		return (0);
 	if(stack->index <= nums / 2)
-		cost = stack->index
+		cost = stack->index;
 	else
 		cost = nums - stack->index;
 	return (cost);	
@@ -93,7 +92,7 @@ int	total_cost(t_stack *stack_A, t_stack *stack_B, int nums_A, int nums_B)
 		temp = find_biggest_node(stack_B);
 	cost_B = cost_calculating(temp, nums_B);
 	if ((stack_A->index <= nums_A / 2 && temp->index <= nums_B / 2) ||
-		(stack_A->index > nums_A / 2 && temp->index > nums_b / 2))
+		(stack_A->index > nums_A / 2 && temp->index > nums_B / 2))
 	{
 		if (cost_A > cost_B)
 			return (cost_A);
@@ -148,7 +147,7 @@ void	actions_forwards(t_stack **stack_A, t_stack **stack_B, t_stack *lowest, t_s
 	}
 	else if (lowest->index >nums_A / 2 && position_B->index > nums_B / 2)
 	{
-		while (*stack_A != lowest && *stack_B != pisiton_B)
+		while (*stack_A != lowest && *stack_B != position_B)
 			rrr(stack_A , stack_B);
 	}
 	while (*stack_A != lowest)
@@ -173,7 +172,7 @@ t_stack	*find_bigger_node(t_stack *stack_A, int value)
         t_stack *temp;
         long    best_biggest;
 
-        if (!stack)
+        if (!stack_A)
                 return (NULL);
         temp = NULL;
         best_biggest = LONG_MAX;
@@ -220,7 +219,7 @@ void actions_backwards(t_stack **stack_A, t_stack **stack_B, t_stack *position_A
 		while (*stack_A != position_A)
 			ra(stack_A);
 	}
-	else if (position->index > nums_A / 2)
+	else if (position_A->index > nums_A / 2)
 	{
 		while (*stack_A != position_A)
 			rra(stack_A);
@@ -235,7 +234,7 @@ void	final_check(t_stack **stack_A)
 
 	set_index(*stack_A);
 	nums_A = number_nodes(*stack_A);
-	smallest = find_smallest_node(stack_A);
+	smallest = find_smallest_node(*stack_A);
 	while (*stack_A != smallest)
 	{
 		if (smallest->index <= nums_A / 2)
@@ -247,10 +246,9 @@ void	final_check(t_stack **stack_A)
 
 void	turk_sorting(t_stack **stack_A, t_stack **stack_B)
 {
-	int	cost_A;
-	int	cost_B;
 	t_stack	*lowest;
 	t_stack	*position_B;
+	t_stack	*position_A;
 
 	if (!stack_A || !stack_B || !*stack_A)
 		return;
@@ -272,7 +270,7 @@ void	turk_sorting(t_stack **stack_A, t_stack **stack_B)
 		position_A = find_bigger_node(*stack_A, (*stack_B)->value);
 		if (!position_A)
 			position_A = find_smallest_node(*stack_A);
-		actions_backward(stack_A, stack_B, position_A);
+		actions_backwards(stack_A, stack_B, position_A);
 	}
 	final_check(stack_A);
 }

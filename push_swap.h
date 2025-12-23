@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:13:13 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/23 10:04:50 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/23 16:51:36 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -47,6 +47,7 @@ void    two_elements(t_stack **stack);
 void    three_elements(t_stack **stack);
 void    four_elements(t_stack **stack_A, t_stack **stack_B);
 void    five_elements(t_stack **stack_A, t_stack **stack_B);
+int     max_value_index(t_stack *stack);
 void    turk_sorting(t_stack **stack_A, t_stack **stack_B);
 
 #endif
