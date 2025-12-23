@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 13:09:18 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/22 16:16:56 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/23 10:03:06 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -145,7 +145,3 @@ void	five_elements(t_stack **stack_A, t_stack **stack_B)
 	four_elements(stack_A, stack_B);
 	pa(stack_A, stack_B);
 }
-
-//void	main_algothim(t_stack **stack)
-
-

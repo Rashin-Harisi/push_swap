@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/22 16:23:36 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/23 10:05:54 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -171,7 +171,6 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			value = ft_atoi(argv[i]);
-			//printf("value is : %ld\n",value);
 			if (value > INT_MAX  || value < INT_MIN || is_douplicat(stack_A, (int) value))
 			{
 				free_stack(&stack_A);
@@ -196,7 +195,7 @@ int main(int argc, char *argv[])
 		else if (numbs == 5)
 			five_elements(&stack_A, &stack_B);
 		else
-			ft_printf("another algorithms\n");
+			turk_sorting(&stack_A, &stack_B);
 	}
 	print_stack(stack_A , "stack_A");
 	print_stack(stack_B, "stack_B");

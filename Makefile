@@ -2,8 +2,8 @@ NAME		= push_swap
 
 SRC			=push_swap.c\
 			 actions.c\
-			 small_sorting.c
-
+			 small_sorting.c\
+			 turk_sorting.c\
 OBJ			= $(SRC:.c=.o)
 
 LIBFT_PATH  = ./libft
