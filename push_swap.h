@@ -6,14 +6,13 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:13:13 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 18:17:08 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/26 11:50:20 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
-# include "./ft_printf/ft_printf.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>

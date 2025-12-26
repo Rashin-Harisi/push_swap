@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 10:03:28 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 17:43:32 by rabdolho         ###   ########.fr       */
+/*   Updated: 2025/12/26 10:11:34 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -76,6 +76,6 @@ void	turk_sorting(t_stack **stack_A, t_stack **stack_B)
 		actions_forwards(stack_A, stack_B, lowest, position_b);
 	}
 	three_elements(stack_A);
-	push_back(stack_A, stack_B);
+	push_back(stack_B, stack_A);
 	final_check(stack_A);
 }

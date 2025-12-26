@@ -16,24 +16,19 @@ SRC		= push_swap.c \
 OBJ		= $(SRC:.c=.o)
 
 LIBFT_PATH	= ./libft
-LIBFT		= $(LIBFT_PATH)/libft.a
-
-FT_PRINTF_PATH	= ./ft_printf
-FT_PRINTF	= $(FT_PRINTF_PATH)/libftprintf.a
+LIBFT		= libft.a
 
 CC		= cc
 CFLAGS		= -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(FT_PRINTF) $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(FT_PRINTF) -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_PATH)
-
-$(FT_PRINTF):
-	$(MAKE) -C $(FT_PRINTF_PATH)
+	cp $(LIBFT_PATH)/libft.a .
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -41,12 +36,10 @@ $(FT_PRINTF):
 clean:
 	rm -f $(OBJ)
 	$(MAKE) clean -C $(LIBFT_PATH)
-	$(MAKE) clean -C $(FT_PRINTF_PATH)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) libft.a libftprintf.a
 	$(MAKE) fclean -C $(LIBFT_PATH)
-	$(MAKE) fclean -C $(FT_PRINTF_PATH)
 
 re: fclean all
 
