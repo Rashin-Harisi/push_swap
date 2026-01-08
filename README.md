@@ -54,17 +54,17 @@ The project includes a `Makefile` that compiles the source files into an executa
 make
 ```
 ### Execution
-````bash
+```bash
 ./push_swap 3 1 2
 # OR
 ARG="4 67 3 87 23"; ./push_swap $ARG
 ```
 ### Cleanup
 To remove object files, run:
-````bash
+```bash
 make clean
 ```
 OR to remore object files and the executable, run:
-````bash
+```bash
 make fclean
 ```
