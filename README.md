@@ -64,7 +64,7 @@ To remove object files, run:
 ```bash
 make clean
 ```
-OR to remore object files and the executable, run:
+OR to remove object files and the executable, run:
 ```bash
 make fclean
 ```
