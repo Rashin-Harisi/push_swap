@@ -50,15 +50,21 @@ Below is a representation of the algorithm sorting 100 and 500 random integers. 
 ## Usage
 ### Compilation
 The project includes a `Makefile` that compiles the source files into an executable named `push_swap`. To compile, run:
-`bash`
-`make`
+```bash
+make
+```
 ### Execution
-`./push_swap 3 1 2`
-`# OR`
-`ARG="4 67 3 87 23"; ./push_swap $ARG`
-
+````bash
+./push_swap 3 1 2
+# OR
+ARG="4 67 3 87 23"; ./push_swap $ARG
+```
 ### Cleanup
 To remove object files, run:
-`make clean`
+````bash
+make clean
+```
 OR to remore object files and the executable, run:
-`make fclean`
+````bash
+make fclean
+```
