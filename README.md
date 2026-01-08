@@ -69,8 +69,7 @@ OR to remore object files and the executable, run:
 make fclean
 ```
 ## Resources
-[Turk Algorithm](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0
-)
-[Doubly Linked List](https://www.geeksforgeeks.org/dsa/doubly-linked-list/)
-[Stack and Algorithm Complexity](https://www.geeksforgeeks.org/c/implement-stack-in-c/)
-[Sorting Algorithms](https://www.youtube.com/watch?v=gcRUIO-8r3U&t=8s)
+* <a href="https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0" target="_blank">Turk Algorithm</a>
+* <a href="https://www.geeksforgeeks.org/dsa/doubly-linked-list/" target="_blank">Doubly Linked List</a>
+* <a href="https://www.geeksforgeeks.org/c/implement-stack-in-c/" target="_blank">Stack and Algorithm Complexity</a>
+* <a href="https://www.youtube.com/watch?v=gcRUIO-8r3U&t=8s" target="_blank">Sorting Algorithms</a>
