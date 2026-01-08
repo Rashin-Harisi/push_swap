@@ -50,6 +50,7 @@ Below is a representation of the algorithm sorting 100 and 500 random integers. 
 ## Usage
 ### Compilation
 The project includes a `Makefile` that compiles the source files into an executable named `push_swap`. To compile, run:
+`bash`
 `make`
 ### Execution
 `./push_swap 3 1 2`
