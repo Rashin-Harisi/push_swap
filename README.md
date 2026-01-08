@@ -68,3 +68,9 @@ OR to remore object files and the executable, run:
 ```bash
 make fclean
 ```
+## Resources
+[Turk Algorithm](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0
+)
+[Doubly Linked List](https://www.geeksforgeeks.org/dsa/doubly-linked-list/)
+[Stack and Algorithm Complexity](https://www.geeksforgeeks.org/c/implement-stack-in-c/)
+[Sorting Algorithms](https://www.youtube.com/watch?v=gcRUIO-8r3U&t=8s)
