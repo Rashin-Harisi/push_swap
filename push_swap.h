@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:13:13 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/26 11:50:20 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:39:39 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -20,8 +20,8 @@
 
 typedef struct s_stack
 {
-	int	value;
-	int	index;
+	int		value;
+	int		index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -76,5 +76,6 @@ void	set_index(t_stack *stack);//
 void	final_check(t_stack **stack_A);
 void	push_back(t_stack **stack_B, t_stack **stack_A);
 void	turk_sorting(t_stack **stack_A, t_stack **stack_B);//
-
+void	fill_stack(t_stack **stack_a, char **value, int i, int is_split);
+void	free_string(char **result);
 #endif

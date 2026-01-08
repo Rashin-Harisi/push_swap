@@ -9,6 +9,7 @@ SRC		= push_swap.c \
 		actions_swap.c\
 		helper_general.c\
 		helper_general_second.c\
+		helper_general_third.c\
 		helper_small_sorting.c\
 		helper_turk_actions_sorting.c\
 		helper_turk_sorting.c\

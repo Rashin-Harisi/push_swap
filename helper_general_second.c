@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/26 12:27:22 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:22:21 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -49,7 +49,7 @@ void	create_node(t_stack **stack_A, char *str)
 	{
 		free_stack(stack_A);
 		write(2, "Error\n", 6);
-		return ;
+		exit(1);
 	}
 	value = ft_atoi(str);
 	if (value > INT_MAX || value < INT_MIN
@@ -57,7 +57,7 @@ void	create_node(t_stack **stack_A, char *str)
 	{
 		free_stack(stack_A);
 		write(2, "Error\n", 6);
-		return ;
+		exit(1);
 	}
 	add_to_bottom(stack_A, new_node((int)value));
 }
@@ -75,34 +75,4 @@ void	free_string(char **result)
 		i++;
 	}
 	free(result);
-}
-
-void	create_stack_a(int argc, char *argv[], t_stack **stack_A)
-{
-	char	**result;
-	int		i;
-
-	result = NULL;
-	if (argc == 2)
-	{
-		i = 0;
-		result = ft_split(argv[1], ' ');
-		if (!result)
-			return ;
-		while (result[i] != NULL)
-		{
-			create_node(stack_A, result[i]);
-			i++;
-		}
-		free_string(result);
-	}
-	else
-	{
-		i = 1;
-		while (i < argc)
-		{
-			create_node(stack_A, argv[i]);
-			i++;
-		}
-	}
 }

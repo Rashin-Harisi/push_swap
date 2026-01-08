@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/26 14:53:08 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 11:40:55 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -42,8 +42,6 @@ int	main(int argc, char *argv[])
 		ft_printf("the list is sorted\n");
 	else
 		push_swap(&stack_a, &stack_b);
-	//print_stack(stack_a, "stack_A");
-	//print_stack(stack_b, "stack_B");
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);
