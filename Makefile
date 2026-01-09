@@ -1,18 +1,18 @@
 NAME		= push_swap
 
 SRC		= push_swap.c \
-		actions_push.c \
+		utilities/actions_push.c \
 		small_sorting.c \
 		turk_sorting.c\
-		actions_reverse_rotate.c\
-		actions_rotate.c\
-		actions_swap.c\
-		helper_general.c\
-		helper_general_second.c\
-		helper_general_third.c\
-		helper_small_sorting.c\
-		helper_turk_actions_sorting.c\
-		helper_turk_sorting.c\
+		utilities/actions_reverse_rotate.c\
+		utilities/actions_rotate.c\
+		utilities/actions_swap.c\
+		utilities/helper_general.c\
+		utilities/helper_general_second.c\
+		utilities/helper_general_third.c\
+		utilities/helper_small_sorting.c\
+		utilities/helper_turk_actions_sorting.c\
+		utilities/helper_turk_sorting.c\
 
 OBJ		= $(SRC:.c=.o)
 

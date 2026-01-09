@@ -6,10 +6,10 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2026/01/08 13:22:21 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:36:56 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	print_stack(t_stack *stack, char *name)
 {

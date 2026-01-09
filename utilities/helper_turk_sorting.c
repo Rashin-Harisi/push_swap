@@ -6,10 +6,10 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 10:03:28 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 13:02:51 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:38:11 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	cost_calculating(t_stack *stack, int nums)
 {

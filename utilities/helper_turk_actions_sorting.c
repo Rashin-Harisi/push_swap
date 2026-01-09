@@ -6,10 +6,10 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 10:03:28 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 12:42:37 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:37:53 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	action_forwards_together(t_stack **stack_A, t_stack **stack_B,
 	t_stack *lowest, t_stack *position_B)

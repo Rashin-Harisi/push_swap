@@ -6,10 +6,10 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 13:24:30 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 11:47:35 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:35:17 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	push(t_stack **stack_A, t_stack **stack_B)
 {

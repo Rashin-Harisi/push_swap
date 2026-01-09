@@ -6,10 +6,10 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 11:32:43 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 12:09:36 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:36:34 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack	*new_node(int value)
 {
