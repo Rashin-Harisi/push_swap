@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:47:41 by rabdolho          #+#    #+#             */
-/*   Updated: 2026/01/08 19:37:13 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:42:06 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
@@ -25,7 +25,7 @@ void	fill_stack(t_stack **stack_a, char **value, int i, int is_split)
 void	create_stack_a(int argc, char *argv[], t_stack **stack_A)
 {
 	char	**result;
-	int	i;
+	int		i;
 
 	result = NULL;
 	if (argc == 2)

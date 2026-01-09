@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 09:13:13 by rabdolho          #+#    #+#             */
-/*   Updated: 2026/01/08 12:39:39 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:15:16 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -78,4 +78,5 @@ void	push_back(t_stack **stack_B, t_stack **stack_A);
 void	turk_sorting(t_stack **stack_A, t_stack **stack_B);//
 void	fill_stack(t_stack **stack_a, char **value, int i, int is_split);
 void	free_string(char **result);
+int		get_action(char *line, t_stack **stack_a, t_stack **stack_b);
 #endif
