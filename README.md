@@ -25,6 +25,28 @@ For this project, I implemented the Turk Algorithm. Unlike traditional Quicksort
 3. Executes the cheapest move until Stack B is empty.
 4. Performs a final rotation to ensure the smallest element is at the top.
 
+### Usage
+#### Compilation
+The project includes a `Makefile` that compiles the source files into an executable named `push_swap`. To compile, run:
+```bash
+make
+# OR
+make bonus
+```
+#### Execution
+```bash
+./push_swap 3 1 2
+# OR
+ARG="4 67 3 87 23"; ./push_swap $ARG
+# OR
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker #ARG
+```
+#### Cleanup
+To remove object files, run:
+```bash
+make clean
+```
+
 ## Performance
 The Turk Algorithm ensures that the move count remains well within the limits required for a perfect score. Below are the average results obtained during testing:
 | Amount of Numbers | Average Move Count | 42 Threshold | Result |
@@ -47,27 +69,7 @@ Below is a representation of the algorithm sorting 100 and 500 random integers. 
 ![Push Swap Visualizer - 100](assets/visualizer_100.png)
 ![Push Swap Visualizer - 500](assets/visualizer_500.png)
 
-## Usage
-### Compilation
-The project includes a `Makefile` that compiles the source files into an executable named `push_swap`. To compile, run:
-```bash
-make
-```
-### Execution
-```bash
-./push_swap 3 1 2
-# OR
-ARG="4 67 3 87 23"; ./push_swap $ARG
-```
-### Cleanup
-To remove object files, run:
-```bash
-make clean
-```
-OR to remove object files and the executable, run:
-```bash
-make fclean
-```
+
 ## Resources
 * <a href="https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0" target="_blank">Turk Algorithm</a>
 * <a href="https://www.geeksforgeeks.org/dsa/doubly-linked-list/" target="_blank">Doubly Linked List</a>

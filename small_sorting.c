@@ -6,7 +6,7 @@
 /*   By: rabdolho <rabdolho@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 13:09:18 by rabdolho          #+#    #+#             */
-/*   Updated: 2025/12/25 14:37:20 by rabdolho         ###   ########.fr       */
+/*   Updated: 2026/01/21 11:57:56 by rabdolho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -31,7 +31,10 @@ void	three_elements(t_stack **stack)
 			sa(stack);
 	}
 	else
-		sa(stack);
+	{
+		if (!is_sorted(*stack))
+			sa(stack);
+	}
 }
 
 void	four_elements(t_stack **stack_A, t_stack **stack_B)
